@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BELLATRA - Kaspi Partnership Proposal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .presentation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* Slide 1: Title */
+        .slide-1 {
+            background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .logo-section {
+            margin-bottom: 60px;
+        }
+
+        .main-title {
+            font-size: 72px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .partnership-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #00D4AA, #00A3FF);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 60px;
+        }
+
+        .objective {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #00D4AA;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .objective h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .objective p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Slide 2: What is BELLATRA */
+        .slide-2 {
+            background: #ffffff;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .slide-title {
+            font-size: 48px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .slide-description {
+            font-size: 24px;
+            color: #666;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 60px 0;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fafbfc;
+            border-radius: 16px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .process-flow {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 40px;
+        }
+
+        .flow-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            min-width: 140px;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00D4AA, #00A3FF);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .step-text {
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .flow-arrow {
+            color: #00D4AA;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+
+        /* Slide 3: Market */
+        .slide-3 {
+            background: #ffffff;
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin: 60px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 50px 30px;
+            background: linear-gradient(135deg, #f8fafb 0%, #ffffff 100%);
+            border-radius: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-icon {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+
+        .stat-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .stat-list li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .stat-list li::before {
+            content: "•";
+            color: #00D4AA;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight-number {
+            color: #00D4AA;
+            font-weight: 700;
+        }
+
+        /* Slide 4: Financial Projections */
+        .slide-4 {
+            background: #ffffff;
+        }
+
+        .projection-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .projection-card {
+            text-align: center;
+            padding: 50px 30px;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 2px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projection-card.year-1 {
+            border-color: #FFE4E1;
+            background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+        }
+
+        .projection-card.year-2 {
+            border-color: #E1F5FF;
+            background: linear-gradient(135deg, #f0faff 0%, #ffffff 100%);
+        }
+
+        .projection-card.year-3 {
+            border-color: #E1FFE1;
+            background: linear-gradient(135deg, #f0fff0 0%, #ffffff 100%);
+        }
+
+        .year-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .revenue-amount {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .projection-details {
+            text-align: left;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .detail-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Slide 5: Benefits & Next Steps */
+        .slide-5 {
+            background: #ffffff;
+        }
+
+        .benefits-next-steps {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #00D4AA;
+        }
+
+        .benefit-item, .step-item {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #00D4AA;
+        }
+
+        .benefit-title, .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .benefit-description, .step-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #00D4AA, #00A3FF);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .contact-item h4 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .contact-item p {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        /* Navigation */
+        .slide-navigation {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #00D4AA;
+            transform: scale(1.2);
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+            z-index: 1000;
+        }
+
+        /* Print styles */
+        @media print {
+            .slide {
+                page-break-after: always;
+                min-height: auto;
+                height: 100vh;
+            }
+            
+            .slide-navigation,
+            .slide-counter {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 40px 30px;
+            }
+            
+            .main-title {
+                font-size: 48px;
+            }
+            
+            .slide-title {
+                font-size: 36px;
+            }
+            
+            .features-grid,
+            .market-stats,
+            .projection-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-next-steps {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .flow-steps {
+                flex-direction: column;
+            }
+            
+            .flow-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Title -->
+        <section class="slide slide-1" id="slide-1">
+            <div class="logo-section">
+                <h1 class="main-title">BELLATRA</h1>
+                <p class="subtitle">Telegram Mini-App для персональных тренировок</p>
+                <div class="partnership-badge">Презентация для получения партнерского доступа к Kaspi API</div>
+            </div>
+            
+            <div class="objective">
+                <h3>Цель встречи</h3>
+                <p>Получить партнерский доступ к Kaspi API для обработки платежей за персональные тренировки</p>
+            </div>
+        </section>
+
+        <!-- Slide 2: What is BELLATRA -->
+        <section class="slide slide-2" id="slide-2">
+            <div class="slide-header">
+                <h2 class="slide-title">Что такое BELLATRA?</h2>
+                <p class="slide-description">Telegram бот для записи к персональным тренерам</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🏋️‍♂️</div>
+                    <h3 class="feature-title">Поиск тренеров</h3>
+                    <p class="feature-description">Пользователи находят персональных тренеров из каталога в боте</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3 class="feature-title">Быстрая запись</h3>
+                    <p class="feature-description">Запись на тренировку за 2 минуты прямо в Telegram</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3 class="feature-title">Оплата Kaspi</h3>
+                    <p class="feature-description">Безопасная оплата тренировок через привычный Kaspi.kz</p>
+                </div>
+            </div>
+
+            <div class="process-flow">
+                <h4 class="flow-title">Пользовательский процесс</h4>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Выбирает тренера</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Бронирует время</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Оплачивает Kaspi</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Проходит тренировку</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="benefits-section" style="margin-top: 40px; background: #f8f9fa; padding: 30px; border-radius: 12px;">
+                <h4 style="font-size: 18px; font-weight: 600; color: #1a1a1a; margin-bottom: 20px;">Почему это нужно:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div style="display: flex; align-items: center; font-size: 14px; color: #555;">
+                        <span style="color: #00D4AA; margin-right: 8px;">✅</span>
+                        <div style="display: flex; flex-direction: column;"><strong>Удобно</strong>Все в привычном Telegram</div>
+                    </div>
+                    <div style="display: flex; align-items: center; font-size: 14px; color: #555;">
+                        <span style="color: #00D4AA; margin-right: 8px;">✅</span>
+                        <div style="display: flex; flex-direction: column;"><strong>Быстро</strong>Запись за 2 минуты</div>
+                    </div>
+                    <div style="display: flex; align-items: center; font-size: 14px; color: #555;">
+                        <span style="color: #00D4AA; margin-right: 8px;">✅</span>
+                        <div style="display: flex; flex-direction: column;"><strong>Безопасно</strong>Оплата через Kaspi</div>
+                    </div>
+                    <div style="display: flex; align-items: center; font-size: 14px; color: #555;">
+                        <span style="color: #00D4AA; margin-right: 8px;">✅</span>
+                        <div style="display: flex; flex-direction: column;"><strong>Популярно</strong>Растущий рынок фитнеса</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Market -->
+        <section class="slide slide-3" id="slide-3">
+            <div class="slide-header">
+                <h2 class="slide-title">Размер рынка и аудитория</h2>
+                <p class="slide-description">Казахстан демонстрирует устойчивый рост фитнес-индустрии</p>
+            </div>
+
+            <div class="market-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <h3 class="stat-title">Целевая аудитория</h3>
+                    <ul class="stat-list">
+                        <li><span class="highlight-number">2.5 млн</span> человек занимаются фитнесом</li>
+                        <li><span class="highlight-number">18-45 лет</span> основная возрастная группа</li>
+                        <li><span class="highlight-number">$100-500</span> месячный бюджет на фитнес</li>
+                    </ul>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <h3 class="stat-title">Рынок тренировок</h3>
+                    <ul class="stat-list">
+                        <li><span class="highlight-number">$50-150</span> стоимость тренировки</li>
+                        <li><span class="highlight-number">8-12</span> тренировок в месяц</li>
+                        <li><span class="highlight-number">+25%</span> рост рынка в год</li>
+                    </ul>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <h3 class="stat-title">Цифровизация</h3>
+                    <ul class="stat-list">
+                        <li><span class="highlight-number">85%</span> используют Telegram</li>
+                        <li><span class="highlight-number">78%</span> имеют карты Kaspi</li>
+                        <li><span class="highlight-number">60%</span> готовы платить онлайн</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Financial Projections -->
+        <section class="slide slide-4" id="slide-4">
+            <div class="slide-header">
+                <h2 class="slide-title">Объемы платежей</h2>
+                <p class="slide-description">Прогнозируемый трафик через Kaspi API</p>
+            </div>
+
+            <div class="projection-cards">
+                <div class="projection-card year-1">
+                    <div class="year-label">Год 1</div>
+                    <div class="revenue-amount">$120K</div>
+                    <div class="projection-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Пользователи:</span>
+                            <span class="detail-value">1,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Средний чек:</span>
+                            <span class="detail-value">$50</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Тренировок/мес:</span>
+                            <span class="detail-value">2,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Месячный оборот:</span>
+                            <span class="detail-value">$10,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projection-card year-2">
+                    <div class="year-label">Год 2</div>
+                    <div class="revenue-amount">$600K</div>
+                    <div class="projection-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Пользователи:</span>
+                            <span class="detail-value">5,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Средний чек:</span>
+                            <span class="detail-value">$60</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Тренировок/мес:</span>
+                            <span class="detail-value">10,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Месячный оборот:</span>
+                            <span class="detail-value">$50,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="projection-card year-3">
+                    <div class="year-label">Год 3</div>
+                    <div class="revenue-amount">$1.08M</div>
+                    <div class="projection-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Пользователи:</span>
+                            <span class="detail-value">10,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Средний чек:</span>
+                            <span class="detail-value">$60</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Тренировок/мес:</span>
+                            <span class="detail-value">15,000</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Месячный оборот:</span>
+                            <span class="detail-value">$90,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Benefits & Next Steps -->
+        <section class="slide slide-5" id="slide-5">
+            <div class="slide-header">
+                <h2 class="slide-title">Почему это выгодно Kaspi и что нам нужно</h2>
+            </div>
+
+            <div class="benefits-next-steps">
+                <div class="benefits-section">
+                    <h3 class="section-title">Ключевые преимущества партнерства</h3>
+                    
+                    <div class="benefit-item">
+                        <h4 class="benefit-title">💸 Регулярный доход</h4>
+                        <p class="benefit-description">Повторяющиеся платежи каждый месяц, высокое удержание пользователей (85%+), рост среднего чека со временем</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h4 class="benefit-title">👥 Целевая аудитория</h4>
+                        <p class="benefit-description">Активные казахстанцы 25-45 лет со средним и высоким доходом, технологически продвинутые</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h4 class="benefit-title">🚀 Растущий рынок</h4>
+                        <p class="benefit-description">Фитнес-индустрия растет на 15% в год, тренд на персональные тренировки, цифровизация фитнес-услуг</p>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <h4 class="benefit-title">📱 Инновационность</h4>
+                        <p class="benefit-description">Первая такая интеграция в Казахстане, укрепление позиций техно-лидера, положительный PR</p>
+                    </div>
+                </div>
+                
+                <div class="next-steps-section">
+                    <h3 class="section-title">Что нам нужно?</h3>
+                    
+                    <div class="step-item">
+                        <h4 class="step-title">🔧 Техническое</h4>
+                        <p class="step-description">• Доступ к Kaspi Merchant API<br>• Sandbox для тестирования<br>• Техническая поддержка при интеграции</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <h4 class="step-title">💼 Коммерческое</h4>
+                        <p class="step-description">• Конкурентные тарифы на обработку платежей<br>• Льготные условия для стартапа на первый год</p>
+                    </div>
+                    
+                    <div class="step-item">
+                        <h4 class="step-title">⏰ Временные рамки</h4>
+                        <p class="step-description">• Интеграция: 4-6 недель<br>• Запуск MVP: 3 месяца<br>• Первые $10K оборота: 4 месяца</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Navigation -->
+    <div class="slide-navigation">
+        <div class="nav-dot active" onclick="goToSlide(1)"></div>
+        <div class="nav-dot" onclick="goToSlide(2)"></div>
+        <div class="nav-dot" onclick="goToSlide(3)"></div>
+        <div class="nav-dot" onclick="goToSlide(4)"></div>
+        <div class="nav-dot" onclick="goToSlide(5)"></div>
+    </div>
+
+    <div class="slide-counter">
+        <span id="current-slide">1</span> / 5
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function goToSlide(slideNumber) {
+            currentSlide = slideNumber;
+            document.getElementById(`slide-${slideNumber}`).scrollIntoView({
+                behavior: 'smooth'
+            });
+            updateNavigation();
+        }
+
+        function updateNavigation() {
+            document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index + 1 === currentSlide);
+            });
+            document.getElementById('current-slide').textContent = currentSlide;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' && currentSlide < totalSlides) {
+                goToSlide(currentSlide + 1);
+            } else if (e.key === 'ArrowLeft' && currentSlide > 1) {
+                goToSlide(currentSlide - 1);
+            }
+        });
+
+        // Scroll detection
+        window.addEventListener('scroll', () => {
+            const slides = document.querySelectorAll('.slide');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            
+            slides.forEach((slide, index) => {
+                const slideTop = slide.offsetTop;
+                const slideBottom = slideTop + slide.offsetHeight;
+                
+                if (scrollPosition >= slideTop && scrollPosition <= slideBottom) {
+                    currentSlide = index + 1;
+                    updateNavigation();
+                }
+            });
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartY = e.changedTouches[0].screenY;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartY - touchEndY;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0 && currentSlide < totalSlides) {
+                    // Swipe up - next slide
+                    goToSlide(currentSlide + 1);
+                } else if (diff < 0 && currentSlide > 1) {
+                    // Swipe down - previous slide
+                    goToSlide(currentSlide - 1);
+                }
+            }
+        }
+
+        // Initialize
+        updateNavigation();
+    </script>
+</body>
+</html>
+                        
